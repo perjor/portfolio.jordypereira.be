@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <div id="nav" >
-      <router-link to="https://jordypereira.be">Back</router-link>
-    </div>
+    <nav class="p-5 md:text-left">
+      <a href="https://jordypereira.be" class="text-orange no-underline uppercase text-4xl">
+        <span class="font-bold font-montserrat">Jordy</span>
+        <span class="font-light font-open"> Pereira</span>
+      </a>
+    </nav>
     <router-view/>
   </div>
 </template>
@@ -15,13 +18,11 @@
 }
 #nav {
   padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    text-decoration: none;
-    &.router-link-exact-active {
-      color: #ff5722;
-    }
-  }
+}
+.font-montserrat {
+  font-family: Montserrat;
+}
+.font-open {
+  font-family: "Open Sans";
 }
 </style>
