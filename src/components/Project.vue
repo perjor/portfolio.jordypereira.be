@@ -1,110 +1,62 @@
 <template>
-  <div class="project shadow-lg">
-    <div class="display">
+  <div class="project shadow-lg w-80v md:h-85v flex flex-col-reverse md:flex-row">
+    <div class="display md:w-4/5 mt-5 flex flex-col-reverse md:flex-col justify-between">
       <div class="currentPicture">
-        <img :src="`./img/projects/${project.imagefolder}/${currentImage.img}`" alt="Project Image" ref="image">
+        <img v-if="currentImage" :src="`./img/projects/${project.imagefolder}/${currentImage.img}`" alt="Project Image" ref="image" class="max-w-full max-h-full">
       </div>
-      <div class="thumbnails">
+      <div class="pb-4">
         <thumbnails :images="this.project.images" :imagefolder="this.project.imagefolder" :current="this.currentImage" v-on:setCurrent="changeImage" />
       </div>
     </div>
-    <div class="w-1/2 flex flex-col justify-between">
+    <div class="md:w-1/2 flex flex-col justify-between">
       <div class="flex flex-col items-center">
         <span class="text-orange font-semibold self-end mr-5">{{ project.category }}</span>
         <div class="px-4 py-2 w-2/3 my-5">
           <h1>{{ project.title }}</h1>
         </div>
-        <div class="my-5">
+        <div class="my-5 w-2/3">
           <p class="my-5" v-html="project.description">
           </p>
           <p class="flex flex-col">
-            <a :href="project.github" target="_blank" rel="noopener">Github</a>
-            <a :href="project.demo" target="_blank" rel="noopener">Demo</a>
+            <a v-if="project.github" :href="project.github" target="_blank" rel="noopener" class="text-orange-dark hover:text-orange no-underline mt-1">Github</a>
+            <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener" class="text-orange-dark hover:text-orange no-underline mt-1">Demo</a>
           </p>
         </div>
       </div>
-      <div class="links">
+      <div class="links invisible md:visible text-orange-lighter italic">
           TODO: links with the same category
       </div>
     </div>
-    
   </div>
 </template>
 
 <script>
-import Thumbnails from '@/components/Thumbnails';
+import Thumbnails from '@/components/Thumbnails'
 
 export default {
   name: 'Project',
+  props: {
+    project: Object,
+    currentImage: Object
+  },
   components: {
     Thumbnails
   },
-  data() {
+  data () {
     return {
       imageCount: 1,
-      currentImage: null,
-      project: {
-        imagefolder: 'Reddut',
-        img: 'front.png',
-        title: 'Laravel blog app',
-        description: 'A blog post app made in Laravel </br> A project made for school',
-        github: 'https://github.com/perjor/Reddut',
-        demo: 'http://reddut.jordypereira.be/',
-        category: 'Back-end',
-        images: [
-          {
-            img: 'front.png'
-          },
-          {
-            img: 'post.png'
-          },
-          {
-            img: 'editPost.png'
-          }
-        ]
-      },
     }
-  },
-  created() {
-    this.currentImage = this.project.images[0] 
   },
   computed: {
-    imageTotal() {
+    imageTotal () {
       return this.project.images.length
-    },
+    }
   },
   methods: {
-    changeImage: function(index) {
-      this.currentImage = this.project.images[index - 1];
-      this.imageCount = index;
-    }
-  },
-}
-</script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-.project {
-  width: 80vw;
-  height: 85vh;
-
-  display: flex;
-  .display {
-    max-width: 60%;
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    .currentPicture img {
-      max-width: 100%;
-      max-height: 100%;
-      transition: 1s;
-    }
-    .thumbnails {
-      align-self: bottom;
-      padding-bottom: 5px;
+    changeImage (index) {
+      this.currentImage = this.project.images[index - 1]
+      this.imageCount = index
     }
   }
 }
-</style>
+</script>

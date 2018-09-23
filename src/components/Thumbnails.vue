@@ -14,14 +14,14 @@ export default {
     'imagefolder': String
   },
   methods: {
-    isCurrent(image) {
-      return this.current === image ? 'current' : '';
+    isCurrent (image) {
+      return this.current === image ? 'current' : ''
     },
-    setCurrent(imageIndex) {
-      this.current = imageIndex;
-    },
-  },
-};
+    setCurrent (imageIndex) {
+      this.current = imageIndex
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

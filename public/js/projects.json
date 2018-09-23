@@ -1,0 +1,89 @@
+[
+  {
+    "img": "front.png",
+    "title": "Reddut: a Laravel blog app",
+    "description": "A blog post app made in Laravel </br> A project made for school",
+    "category": "Back-end",
+    "imagefolder": "Reddut",
+    "github": "https://github.com/perjor/Reddut",
+    "demo": "http://reddut.jordypereira.be/",
+    "images": [
+      { "img": "front.png" },
+      { "img": "post.png" },
+      { "img": "editPost.png" }
+    ]
+  },
+  {
+    "img": "home.png",
+    "title": "Intranet: a Flask app",
+    "description": "A CRUD app made in Flask, Python",
+    "category": "Back-end",
+    "imagefolder": "Flask",
+    "github": "https://github.com/perjor/secu_school",
+    "demo": "",
+    "images": [
+      { "img": "home.png" },
+      { "img": "aanbod.png" },
+      { "img": "add_klas.png" },
+      { "img": "add_leerkracht.png" },
+      {
+        "img": "contact.png"
+      },
+      {
+        "img": "dashboard_leerkracht.png"
+      },
+      {
+        "img": "dashboard.png"
+      },
+      {
+        "img": "edit_richting.png"
+      },
+      {
+        "img": "wie.png"
+      }
+    ]
+  },
+  {
+    "img": "home.png",
+    "title": "Hsc Brabo website",
+    "description": "A website for the student club HSC Brabo. Made with PugJS and Gulp. </br> Also has a database website to view the users and adjust them, written in plain php",
+    "category": "Front-end",
+    "imagefolder": "HSCBrabo",
+    "github": "",
+    "demo": "http://www.hscbrabo.be/",
+    "images": [
+      {
+        "img": "home.png"
+      },
+      {
+        "img": "about.png"
+      },
+      {
+        "img": "db_users.png"
+      },
+      {
+        "img": "brabokot.png"
+      }
+    ]
+  },
+  {
+    "img": "home.png",
+    "title": "Star Wars React App",
+    "description": "A react app that loads in an API and saves it's own version in a GraphQL database",
+    "category": "Front-end",
+    "imagefolder": "StarWars",
+    "github": "https://github.com/perjor/starwarsApp-REACT",
+    "demo": "https://starwars.jordypereira.be/planets",
+    "images": [
+      {
+        "img": "home.png"
+      },
+      {
+        "img": "add_planet.png"
+      },
+      {
+        "img": "planet.png"
+      }
+    ]
+  }
+]
