@@ -44,7 +44,7 @@ export default {
   },
   data () {
     return {
-      imageCount: 1,
+      imageCount: 1
     }
   },
   computed: {

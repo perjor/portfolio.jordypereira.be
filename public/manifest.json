@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "short_name": "portfolio",
+  "description": "Portfolio of Jordy Pereira",
   "icons": [
     {
       "src": "/img/icons/android-chrome-192x192.png",
