@@ -25,4 +25,7 @@
 .font-open {
   font-family: "Open Sans";
 }
+.transition-1 {
+  transition: 1s;
+}
 </style>

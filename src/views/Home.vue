@@ -1,10 +1,19 @@
 <template>
   <div class="flex items-center justify-around">
-    <span class="text-orange-light tracking-wide" @click="previousProject()" role="button">Previous Project</span>
+    <div @click="previousProject()" role="button" class="h-85v flex items-center">
+      <span class="text-orange-light hover:text-orange transition-1 tracking-wide hidden md:block">Previous Project</span>
+      <span class="md:hidden text-4xl text-orange px-2">&#8592;</span>
+    </div>
+    
     <div class="project" ref="project">
       <Project v-if="!loading" :project="this.currentProject" :currentImage="this.currentProject.images[0]" />
     </div>
-    <span class="text-orange-light tracking-wide" @click="nextProject()" role="button">Next Project</span>
+
+    <div @click="nextProject()" role="button" class="h-85v flex items-center">
+      <span class="text-orange-light hover:text-orange transition-1 tracking-wide hidden md:block">Next Project</span>
+      <span class="md:hidden text-4xl text-orange text-orange px-2">&#8594;</span>
+    </div>
+
   </div>
 </template>
 
