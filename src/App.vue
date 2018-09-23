@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <div id="nav" >
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
@@ -10,9 +10,7 @@
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   text-align: center;
   color: #2c3e50;
 }
@@ -21,8 +19,9 @@
   a {
     font-weight: bold;
     color: #2c3e50;
+    text-decoration: none;
     &.router-link-exact-active {
-      color: #42b983;
+      color: #ff5722;
     }
   }
 }
