@@ -1,7 +1,7 @@
 <template>
-  <div class="project shadow-lg w-80v md:h-85v flex flex-col-reverse md:flex-row">
-    <div class="display md:w-4/5 mt-5 flex flex-col-reverse md:flex-col justify-between">
-      <div class="currentPicture">
+  <div class="bg-white shadow-lg w-80v md:h-85v flex flex-col-reverse md:flex-row">
+    <div class="md:w-4/5 mt-5 flex flex-col-reverse md:flex-col justify-between">
+      <div>
         <img v-if="currentImage" :src="`./img/projects/${project.imagefolder}/${currentImage.img}`" alt="Project Image" ref="image" class="max-w-full max-h-full">
       </div>
       <div class="pb-4">
@@ -23,7 +23,7 @@
           </p>
         </div>
       </div>
-      <div class="links invisible md:visible text-orange-lighter italic">
+      <div class="invisible md:visible text-orange-lighter italic">
           TODO: links with the same category
       </div>
     </div>

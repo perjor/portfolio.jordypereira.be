@@ -4,8 +4,8 @@
       <span class="text-orange-light hover:text-orange transition-1 tracking-wide hidden md:block">Previous Project</span>
       <span class="md:hidden text-4xl text-orange px-2">&#8592;</span>
     </div>
-    
-    <div class="project" ref="project">
+
+    <div class="animate" ref="project">
       <Project v-if="!loading" :project="this.currentProject" :currentImage="this.currentProject.images[0]" />
     </div>
 
@@ -79,7 +79,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.project {
+.animate {
   animation-duration: 200ms;
   animation-fill-mode: both;
   transition: all 1000ms;

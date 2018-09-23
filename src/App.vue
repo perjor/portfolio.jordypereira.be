@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="bg-white h-screen">
     <nav class="p-5 md:text-left">
       <a href="https://jordypereira.be" class="text-orange no-underline uppercase text-4xl">
         <span class="font-bold font-montserrat">Jordy</span>
@@ -15,9 +15,6 @@
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   text-align: center;
   color: #2c3e50;
-}
-#nav {
-  padding: 30px;
 }
 .font-montserrat {
   font-family: Montserrat;
