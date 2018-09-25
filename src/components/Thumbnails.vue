@@ -1,7 +1,7 @@
 <template>
   <div class="t-container" v-if="!this.$store.state.loading && this.$store.state.currentProject" @click.self="clearImage()">
     <div class="s-thumbnails">
-      <div class="s-thumbnail transition-1" v-for="(image, i) in images" :key="i" :style="{ backgroundImage: `url('../img/projects/${imagefolder}/${image}')`}" :class="isCurrent(image)" @click="changeImage(i+1)"></div>
+      <div class="s-thumbnail" v-for="(image, i) in images" :key="i" :style="{ backgroundImage: `url('../img/projects/${imagefolder}/${image}')`}" :class="isCurrent(image)" @click="changeImage(i+1)"></div>
     </div>
   </div>
 </template>
@@ -52,6 +52,7 @@ $break-large: 980px;
       margin: 0 10px;
       background-size: cover;
       background-position: center;
+      transition: border 0.5s;
       &:hover {
         cursor: pointer;
         border: 3px solid #ff5722;
