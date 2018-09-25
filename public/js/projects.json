@@ -97,9 +97,9 @@
     "demo": "https://starwars.jordypereira.be/planets",
     "tech": [
       "ReactJS",
-      "Bootstrap Theme",
+      "Bootstrap-Theme",
       "API",
-      "CSS Grid",
+      "CSS-Grid",
       "GraphQL",
       "Heroku"
     ],
