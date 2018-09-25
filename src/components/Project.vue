@@ -10,7 +10,7 @@
     </div>
     <div class="md:w-1/2 flex flex-col justify-between">
       <div class="flex flex-col items-center">
-        <span class="text-orange font-semibold self-end mr-5">{{ project.category }}</span>
+        <span class="text-orange font-semibold self-end mr-5 mt-3">{{ project.category }}</span>
         <div class="px-4 py-2 md:w-2/3 my-5">
           <h1>{{ project.title }}</h1>
         </div>
