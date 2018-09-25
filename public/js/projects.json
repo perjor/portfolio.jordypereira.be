@@ -24,7 +24,7 @@
   {
     "img": "home.png",
     "title": "Intranet: a Flask app",
-    "description": "A CRUD app made in Flask, Python",
+    "description": "A CRUD app made in Flask, Python. </br> A school project.",
     "category": "Back-end",
     "imagefolder": "Flask",
     "github": "https://github.com/perjor/secu_school",
@@ -60,7 +60,7 @@
   {
     "img": "home.png",
     "title": "Hsc Brabo website",
-    "description": "A website for the student club HSC Brabo. Made with PugJS and Gulp. </br> Also has a database website to view the users and adjust them, written in plain php",
+    "description": "A website for the student club HSC Brabo. </br> Also has a database website to view the users and adjust them, written in plain php",
     "category": "Front-end",
     "imagefolder": "HSCBrabo",
     "github": "",
