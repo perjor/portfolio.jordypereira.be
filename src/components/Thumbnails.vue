@@ -1,5 +1,5 @@
 <template>
-  <div class="t-container" v-if="!this.$store.state.loading && this.$store.state.currentProject">
+  <div class="t-container" v-if="!this.$store.state.loading && this.$store.state.currentProject" @click.self="clearImage()">
     <div class="s-thumbnails">
       <div class="s-thumbnail" v-for="(image, i) in images" :key="i" :style="{ backgroundImage: `url('../img/projects/${imagefolder}/${image}')`}" :class="isCurrent(image)" @click="changeImage(i+1)"></div>
     </div>
@@ -17,6 +17,9 @@ export default {
     changeImage (index) {
       this.$store.commit('changeImage', this.images[index - 1])
       this.imageCount = index
+    },
+    clearImage () {
+      this.$store.commit('clearImage')
     }
   },
   computed: mapState({
@@ -35,7 +38,6 @@ $break-large: 980px;
   display: flex;
   justify-content: center;
   overflow-x: auto;
-  z-index: 20;
   .s-thumbnails {
     display: flex;
     .s-thumbnail {

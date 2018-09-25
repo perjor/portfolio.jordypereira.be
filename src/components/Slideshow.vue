@@ -1,7 +1,7 @@
 <template>
-  <div class="md:w-4/5 mt-5 flex flex-col-reverse md:flex-col justify-between">
-    <div class="">
-      <img v-if="currentImage" :src="`./img/projects/${imagefolder}/${currentImage}`" alt="Project Image" class="max-w-full">
+  <div class="md:w-4/5 mt-5 flex justify-center align-center max-w-full max-h-full w-full h-full">
+    <div>
+      <img v-if="currentImage" :src="`./img/projects/${imagefolder}/${currentImage}`" alt="Project Image" class="max-w-full max-h-full">
     </div>
   </div>
 </template>

@@ -2,9 +2,9 @@
   <div class="flex
               flex-col
               justify-between">
-    <div class="w-full hidden md:flex flex-row justify-center">
+    <div class="w-full flex-1 hidden md:flex flex-row justify-center">
       <Slideshow v-if="this.$store.state.currentImage" />
-      <Description v-if="this.$store.state.currentProject" />
+      <Description v-if="this.$store.state.currentProject" class="flex-auto"/>
     </div>
     <Description v-if="this.$store.state.currentProject" class="md:hidden" />
     <Thumbnails class="py-5" />

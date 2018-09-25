@@ -18,6 +18,9 @@ export default new Vuex.Store({
     },
     changeImage (state, image) {
       state.currentImage = image
+    },
+    clearImage (state) {
+      state.currentImage = null
     }
   },
   actions: {
