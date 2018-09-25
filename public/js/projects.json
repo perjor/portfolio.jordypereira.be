@@ -6,7 +6,7 @@
     "category": "Back-end",
     "imagefolder": "Reddut",
     "github": "https://github.com/perjor/Reddut",
-    "demo": "http://reddut.jordypereira.be/",
+    "demo": "https://reddut.jordypereira.be/",
     "images": [
       { "img": "front.png" },
       { "img": "post.png" },
