@@ -1,17 +1,15 @@
 <template>
   <div class="flex items-center justify-around">
-    <div @click="previousProject()" role="button" class="h-85v flex items-center">
-      <span class="text-orange-light hover:text-orange transition-1 tracking-wide hidden md:block">Previous Project</span>
-      <span class="md:hidden text-4xl text-orange px-2">&#8592;</span>
+    <div @click="previousProject()" role="button" class="h-85v w-full flex items-center justify-center text-orange hover:text-orange-light">
+      <span class="text-4xl">&#8592;</span>
     </div>
 
     <div class="animate" ref="project">
       <Project v-if="!loading" :project="this.currentProject" :currentImage="this.currentProject.images[0]" />
     </div>
 
-    <div @click="nextProject()" role="button" class="h-85v flex items-center">
-      <span class="text-orange-light hover:text-orange transition-1 tracking-wide hidden md:block">Next Project</span>
-      <span class="md:hidden text-4xl text-orange text-orange px-2">&#8594;</span>
+    <div @click="nextProject()" role="button" class="h-85v w-full flex items-center justify-center text-orange hover:text-orange-light">
+      <span class="text-4xl">&#8594;</span>
     </div>
 
   </div>
