@@ -19,7 +19,7 @@
           </p>
           <p class="flex flex-col">
             <a v-if="project.github" :href="project.github" target="_blank" rel="noopener" class="text-orange-dark hover:text-orange no-underline mt-1">Github</a>
-            <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener" class="text-orange-dark hover:text-orange no-underline mt-1">Demo</a>
+            <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener" class="text-orange-dark hover:text-orange no-underline mt-1">Demo / Website</a>
           </p>
         </div>
       </div>
