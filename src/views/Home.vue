@@ -28,7 +28,7 @@ export default {
       projectCount: 1,
       fadeDuration: 300,
       lightColor: 'bg-white',
-      darkColor: 'bg-grey-light'
+      darkColor: 'bg-orange-lightest'
     }
   },
   mounted () {
