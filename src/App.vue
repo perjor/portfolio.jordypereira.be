@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="bg-white h-screen">
+  <div id="app" class="bg-grey-lightest h-screen">
     <nav class="p-5 md:text-left">
       <a href="https://jordypereira.be" class="text-orange no-underline uppercase text-4xl">
         <span class="font-bold font-montserrat">Jordy</span>
@@ -11,6 +11,9 @@
 </template>
 
 <style lang="scss">
+::selection {
+  background: #becbd8;
+}
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   text-align: center;
