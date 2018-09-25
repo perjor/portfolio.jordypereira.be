@@ -1,70 +1,28 @@
 <template>
-  <div class="bg-white shadow-lg w-80v md:h-85v flex flex-col-reverse md:flex-row">
-    <div class="md:w-4/5 mt-5 flex flex-col-reverse md:flex-col justify-between">
-      <div>
-        <img v-if="currentImage" :src="`./img/projects/${project.imagefolder}/${currentImage.img}`" alt="Project Image" ref="image" class="max-w-full max-h-full">
-      </div>
-      <div class="pb-4">
-        <thumbnails :images="this.project.images" :imagefolder="this.project.imagefolder" :current="this.currentImage" v-on:setCurrent="changeImage" />
-      </div>
+  <div class="flex
+              flex-col
+              justify-between">
+    <div class="w-full hidden md:flex flex-row justify-center">
+      <Slideshow v-if="this.$store.state.currentImage" />
+      <Description v-if="this.$store.state.currentProject" />
     </div>
-    <div class="md:w-1/2 flex flex-col justify-between">
-      <div class="flex flex-col items-center">
-        <div class="text-orange  w-full flex flex-row justify-between mt-3">
-          <ul class="list-reset flex flex-row flex-wrap w-2/3">
-            <li v-for="(tech, i) in project.tech" :key="i" class="inline px-2 text-sm">{{ tech }}</li>
-          </ul>
-          <span class="font-semibold mr-5">{{ project.category }}</span>
-        </div>
-        <div class="px-4 py-2 md:w-2/3 my-5">
-          <h1 class="text-center">{{ project.title }}</h1>
-        </div>
-        <div class="my-5 w-2/3">
-          <p class="my-5 text-center" v-html="project.description">
-          </p>
-          <ul class="list-reset my-5">
-            <li v-for="(feature, i) in project.features" :key="i" class="mb-1"> <span class="font-bold text-orange">+ </span>{{ feature }}</li>
-          </ul>
-          <p class="flex flex-col mt-3">
-            <a v-if="project.github" :href="project.github" target="_blank" rel="noopener" class="text-orange-dark hover:text-orange no-underline mt-1">Github</a>
-            <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener" class="text-orange-dark hover:text-orange no-underline mt-1">Demo / Website</a>
-          </p>
-        </div>
-      </div>
-      <div class="invisible md:visible text-orange-lighter italic text-center">
-          TODO: links with the same category
-      </div>
-    </div>
+    <Description v-if="this.$store.state.currentProject" class="md:hidden" />
+    <Thumbnails class="py-5" />
+    <Slideshow v-if="this.$store.state.currentImage" class="md:hidden" />
   </div>
 </template>
 
 <script>
+import Slideshow from '@/components/Slideshow'
 import Thumbnails from '@/components/Thumbnails'
+import Description from '@/components/Description'
 
 export default {
   name: 'Project',
-  props: {
-    project: Object,
-    currentImage: Object
-  },
   components: {
-    Thumbnails
-  },
-  data () {
-    return {
-      imageCount: 1
-    }
-  },
-  computed: {
-    imageTotal () {
-      return this.project.images.length
-    }
-  },
-  methods: {
-    changeImage (index) {
-      this.currentImage = this.project.images[index - 1]
-      this.imageCount = index
-    }
+    Slideshow,
+    Thumbnails,
+    Description
   }
 }
 </script>

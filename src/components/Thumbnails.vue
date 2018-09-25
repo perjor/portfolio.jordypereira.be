@@ -1,26 +1,29 @@
 <template>
-  <div class="t-container">
+  <div class="t-container" v-if="!this.$store.state.loading && this.$store.state.currentProject">
     <div class="s-thumbnails">
-      <div class="s-thumbnail" v-for="(image, i) in images" :key="i" :style="{ backgroundImage: `url('../img/projects/${imagefolder}/${image.img}')`}" :class="isCurrent(image)" @click="$emit('setCurrent',i+1)"></div>
+      <div class="s-thumbnail" v-for="(image, i) in images" :key="i" :style="{ backgroundImage: `url('../img/projects/${imagefolder}/${image}')`}" :class="isCurrent(image)" @click="changeImage(i+1)"></div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-  props: {
-    'images': Array,
-    'current': Object,
-    'imagefolder': String
-  },
   methods: {
     isCurrent (image) {
       return this.current === image ? 'current' : ''
     },
-    setCurrent (imageIndex) {
-      this.current = imageIndex
+    changeImage (index) {
+      this.$store.commit('changeImage', this.images[index - 1])
+      this.imageCount = index
     }
-  }
+  },
+  computed: mapState({
+    images: state => state.currentProject.images,
+    imagefolder: state => state.currentProject.imagefolder,
+    current: state => state.currentImage
+  })
 }
 </script>
 
@@ -32,6 +35,7 @@ $break-large: 980px;
   display: flex;
   justify-content: center;
   overflow-x: auto;
+  z-index: 20;
   .s-thumbnails {
     display: flex;
     .s-thumbnail {

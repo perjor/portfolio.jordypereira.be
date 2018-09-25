@@ -5,7 +5,7 @@
     </div>
 
     <div class="animate" ref="project">
-      <Project v-if="!loading" :project="this.currentProject" :currentImage="this.currentProject.images[0]" />
+      <Project v-if="!this.$store.state.loading"   class="bg-white shadow-lg w-80v md:h-85v" />
     </div>
 
     <div @click="nextProject()" role="button" class="h-85v w-full flex items-center justify-center text-orange hover:text-orange-light">
@@ -17,7 +17,6 @@
 
 <script>
 import Project from '@/components/Project.vue'
-import axios from 'axios'
 
 export default {
   name: 'home',
@@ -26,30 +25,22 @@ export default {
   },
   data () {
     return {
-      loading: true,
-      projects: [],
-      currentProject: null,
-      projectsTotal: 0,
       projectCount: 1,
       fadeDuration: 300
     }
   },
   mounted () {
-    axios.get('js/projects.json').then(response => {
-      this.projects = response.data
-      this.currentProject = this.projects[0]
-      this.projectsTotal = this.projects.length
-      this.loading = false
-    })
+    this.$store.dispatch('fetchProjects')
   },
   methods: {
     changeProject (index) {
-      this.currentProject = this.projects[index - 1]
+      // this.currentProject = this.projects[index - 1]
+      this.$store.commit('changeProject', this.$store.state.projects[index - 1])
       this.projectCount = index
     },
     nextProject () {
       this.$refs.project.classList.add('fadeInRight')
-      if (this.projectCount === this.projectsTotal) {
+      if (this.projectCount === this.$store.getters.projectsTotal) {
         this.projectCount = 1
       } else {
         this.projectCount++
@@ -61,14 +52,17 @@ export default {
     },
     previousProject () {
       this.$refs.project.classList.add('fadeInLeft')
+
       if (this.projectCount === 1) {
-        this.projectCount = this.projectsTotal
+        this.projectCount = this.$store.getters.projectsTotal
       } else {
         this.projectCount--
       }
+
       setTimeout(() => {
         this.$refs.project.classList.remove('fadeInLeft')
       }, this.fadeDuration)
+
       this.changeProject(this.projectCount)
     }
   }
