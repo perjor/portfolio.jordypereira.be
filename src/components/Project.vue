@@ -10,13 +10,19 @@
     </div>
     <div class="md:w-1/2 flex flex-col justify-between">
       <div class="flex flex-col items-center">
-        <span class="text-orange font-semibold self-end mr-5 mt-3">{{ project.category }}</span>
+        <div class="text-orange  w-full flex flex-row justify-between mt-3">
+          <ul class="list-reset ">
+            <li v-for="(tech, i) in project.tech" :key="i" class="inline px-3">{{ tech }}</li>
+          </ul>
+          <span class="font-semibold mr-5">{{ project.category }}</span>
+        </div>
         <div class="px-4 py-2 md:w-2/3 my-5">
           <h1>{{ project.title }}</h1>
         </div>
         <div class="my-5 w-2/3">
           <p class="my-5" v-html="project.description">
           </p>
+         
           <p class="flex flex-col">
             <a v-if="project.github" :href="project.github" target="_blank" rel="noopener" class="text-orange-dark hover:text-orange no-underline mt-1">Github</a>
             <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener" class="text-orange-dark hover:text-orange no-underline mt-1">Demo / Website</a>
@@ -44,7 +50,7 @@ export default {
   },
   data () {
     return {
-      imageCount: 1
+      imageCount: 1,
     }
   },
   computed: {
