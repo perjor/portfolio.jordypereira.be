@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center">
+  <div class="flex flex-col items-center md:mt-5">
     <div class="md:w-2/4 px-2">
       <h1 class="mt-5">{{ project.title }}</h1>
       <div class="text-orange w-full mt-3">
