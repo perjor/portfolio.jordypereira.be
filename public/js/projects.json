@@ -15,11 +15,7 @@
       "Edit and delete your own posts / comments.",
       "Admin can sticky a post and delete or edit all comments and posts."
     ],
-    "images": [
-      { "img": "front.png" },
-      { "img": "post.png" },
-      { "img": "editPost.png" }
-    ]
+    "images": ["front.png", "post.png", "editPost.png"]
   },
   {
     "img": "home.png",
@@ -36,25 +32,15 @@
       "Teachers can add, edit and delete this info. They can also assign teachers to classes. "
     ],
     "images": [
-      { "img": "home.png" },
-      { "img": "aanbod.png" },
-      { "img": "add_klas.png" },
-      { "img": "add_leerkracht.png" },
-      {
-        "img": "contact.png"
-      },
-      {
-        "img": "dashboard_leerkracht.png"
-      },
-      {
-        "img": "dashboard.png"
-      },
-      {
-        "img": "edit_richting.png"
-      },
-      {
-        "img": "wie.png"
-      }
+      "home.png",
+      "aanbod.png",
+      "add_klas.png",
+      "add_leerkracht.png",
+      "contact.png",
+      "dashboard_leerkracht.png",
+      "dashboard.png",
+      "edit_richting.png",
+      "wie.png"
     ]
   },
   {
@@ -72,20 +58,7 @@
       "Brabokot info is adjustable from an admin panel.",
       "Users can register with a form, that needs to be accepted in the admin panel."
     ],
-    "images": [
-      {
-        "img": "home.png"
-      },
-      {
-        "img": "about.png"
-      },
-      {
-        "img": "db_users.png"
-      },
-      {
-        "img": "brabokot.png"
-      }
-    ]
+    "images": ["home.png", "about.png", "db_users.png", "brabokot.png"]
   },
   {
     "img": "home.png",
@@ -108,16 +81,6 @@
       "Create your own planet with its types and residents loaded from the API>",
       "Save your own planets in a GraphQL database hosted on Heroku"
     ],
-    "images": [
-      {
-        "img": "home.png"
-      },
-      {
-        "img": "add_planet.png"
-      },
-      {
-        "img": "planet.png"
-      }
-    ]
+    "images": ["home.png", "add_planet.png", "planet.png"]
   }
 ]
