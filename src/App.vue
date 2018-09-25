@@ -5,7 +5,7 @@
         <span class="font-bold font-montserrat">Jordy</span>
         <span class="font-light font-open"> Pereira</span>
       </a>
-      <button @click="$store.dispatch('switchTheme')" class="text-orange-light hover:text-orange transition-05 capitalize font-medium">Enable {{ this.$store.getters.reverseTheme }} Theme</button>
+      <button @click="$store.dispatch('switchTheme')" class="text-orange-light hover:text-orange focus:outline-none transition-05 capitalize font-medium">Enable {{ this.$store.getters.reverseTheme }} Theme</button>
     </nav>
     <router-view/>
   </div>
