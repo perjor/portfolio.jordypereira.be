@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="h-screen transition-05" :class="themeBackground">
+  <div id="app" class="min-h-screen transition-05" :class="themeBackground">
     <nav class="p-5 flex justify-between">
       <a href="https://jordypereira.be" class="text-orange no-underline uppercase text-4xl">
         <span class="font-bold font-montserrat">Jordy</span>
