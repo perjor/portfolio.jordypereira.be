@@ -7,6 +7,14 @@
     "imagefolder": "Reddut",
     "github": "https://github.com/perjor/Reddut",
     "demo": "https://reddut.jordypereira.be/",
+    "tech": ["Laravel", "PHP", "Bootstrap"],
+    "features": [
+      "Authentication: Login and Register.",
+      "Create a post and comment on it.",
+      "Reply on comments.",
+      "Edit and delete your own posts / comments.",
+      "Admin can sticky a post and delete or edit all comments and posts."
+    ],
     "images": [
       { "img": "front.png" },
       { "img": "post.png" },
@@ -21,6 +29,12 @@
     "imagefolder": "Flask",
     "github": "https://github.com/perjor/secu_school",
     "demo": "",
+    "tech": ["Python", "Flask", "Bootstrap"],
+    "features": [
+      "Authentication: Login as a teacher.",
+      "Students can see the classes, teachers and contact info",
+      "Teachers can add, edit and delete this info. They can also assign teachers to classes. "
+    ],
     "images": [
       { "img": "home.png" },
       { "img": "aanbod.png" },
@@ -51,6 +65,13 @@
     "imagefolder": "HSCBrabo",
     "github": "",
     "demo": "http://www.hscbrabo.be/",
+    "tech": ["PugJS", "Gulp", "Bootstrap", "Plain PHP"],
+    "features": [
+      "4 static pages with info about the club.",
+      "Praesidium list is made with pugjs mixins.",
+      "Brabokot info is adjustable from an admin panel.",
+      "Users can register with a form, that needs to be accepted in the admin panel."
+    ],
     "images": [
       {
         "img": "home.png"
@@ -74,6 +95,19 @@
     "imagefolder": "StarWars",
     "github": "https://github.com/perjor/starwarsApp-REACT",
     "demo": "https://starwars.jordypereira.be/planets",
+    "tech": [
+      "ReactJS",
+      "Bootstrap Theme",
+      "API",
+      "CSS Grid",
+      "GraphQL",
+      "Heroku"
+    ],
+    "features": [
+      "Load planets from the Star Wars API and choose what info you want to show.",
+      "Create your own planet with its types and residents loaded from the API>",
+      "Save your own planets in a GraphQL database hosted on Heroku"
+    ],
     "images": [
       {
         "img": "home.png"
