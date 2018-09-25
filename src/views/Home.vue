@@ -5,7 +5,7 @@
     </div>
 
     <div class="animate" ref="project">
-      <Project v-if="!this.$store.state.loading"   class="bg-white shadow-lg w-80v md:h-85v" />
+      <Project v-if="!this.$store.state.loading" class="shadow-lg w-80v md:h-85v" :class="themeBackground" />
     </div>
 
     <div @click="nextProject()" role="button" class="h-85v w-full flex items-center justify-center text-orange hover:text-orange-light">
@@ -26,15 +26,23 @@ export default {
   data () {
     return {
       projectCount: 1,
-      fadeDuration: 300
+      fadeDuration: 300,
+      lightColor: 'bg-white',
+      darkColor: 'bg-grey-light'
     }
   },
   mounted () {
     this.$store.dispatch('fetchProjects')
   },
+  computed: {
+    themeBackground () {
+      let theme = this.lightColor
+      if (this.$store.getters.theme === 'dark') theme = this.darkColor
+      return theme
+    }
+  },
   methods: {
     changeProject (index) {
-      // this.currentProject = this.projects[index - 1]
       this.$store.commit('changeProject', this.$store.state.projects[index - 1])
       this.projectCount = index
     },

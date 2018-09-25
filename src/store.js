@@ -9,7 +9,8 @@ export default new Vuex.Store({
     currentImage: null,
     currentProject: null,
     projects: [],
-    loading: false
+    loading: false,
+    userTheme: null
   },
   mutations: {
     changeProject (state, project) {
@@ -31,6 +32,9 @@ export default new Vuex.Store({
         state.currentProject = state.projects[0]
         state.loading = false
       })
+    },
+    switchTheme ({ state, getters }) {
+      state.userTheme = getters.reverseTheme
     }
   },
   getters: {
@@ -39,6 +43,17 @@ export default new Vuex.Store({
     },
     imagesTotal: state => {
       return state.currentProject.images.length
+    },
+    theme: state => {
+      if (state.userTheme) return state.userTheme
+      const d = new Date()
+      const t = d.getHours()
+      if (t >= 19 || t <= 6) return 'dark'
+      return 'light'
+    },
+    reverseTheme: (state, getters) => {
+      if (getters.theme === 'light') return 'dark'
+      return 'light'
     }
   }
 })
