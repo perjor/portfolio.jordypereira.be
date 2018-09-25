@@ -36,7 +36,6 @@ export default {
   },
   mounted () {
     axios.get('js/projects.json').then(response => {
-      // console.log(response);
       this.projects = response.data
       this.currentProject = this.projects[0]
       this.projectsTotal = this.projects.length
