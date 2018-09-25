@@ -3,8 +3,10 @@
               flex-col
               justify-between">
     <div class="w-full flex-1 hidden md:flex flex-row justify-center">
-      <Slideshow v-if="this.$store.state.currentImage" />
-      <Description v-if="this.$store.state.currentProject" class="flex-auto"/>
+      <transition name="fade">
+        <Slideshow v-if="this.$store.state.currentImage" />
+      </transition>
+      <Description v-if="this.$store.state.currentProject" class="flex-auto transition-1"/>
     </div>
     <Description v-if="this.$store.state.currentProject" class="md:hidden" />
     <Thumbnails class="py-5" />

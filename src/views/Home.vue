@@ -4,7 +4,7 @@
       <span class="text-4xl">&#8592;</span>
     </div>
 
-    <div class="animate" ref="project">
+    <div class="animate " ref="project">
       <Project v-if="!this.$store.state.loading"   class="bg-white shadow-lg w-80v md:h-85v" />
     </div>
 
@@ -70,12 +70,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.animate {
-  animation-duration: 200ms;
-  animation-fill-mode: both;
-  transition: all 1000ms;
-}
-
 @keyframes fadeInLeft {
   from {
     opacity: 0;

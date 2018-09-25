@@ -11,6 +11,12 @@
 </template>
 
 <style lang="scss">
+.animate {
+  animation-duration: 200ms;
+  animation-fill-mode: both;
+  transition: all 1000ms;
+}
+
 ::selection {
   background: #becbd8;
 }
@@ -26,5 +32,13 @@
 }
 .transition-1 {
   transition: 1s;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
