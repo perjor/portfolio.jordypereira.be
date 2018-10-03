@@ -82,5 +82,21 @@
       "Save your own planets in a GraphQL database hosted on Heroku"
     ],
     "images": ["home.png", "add_planet.png", "planet.png"]
+  },
+  {
+    "img": "",
+    "title": "This Portfolio Site",
+    "description": "This site is made in Vue.js. I use Vuex to keep a global state and the gallery is made from scratch. I decided to use Tailwind.css for the layout.",
+    "category": "Front-end",
+    "imagefolder": "Portfolio",
+    "github": "https://github.com/perjor/portfolio.jordypereira.be",
+    "demo": "",
+    "tech": ["VueJS", "Tailwind CSS", "Vuex"],
+    "features": [
+      "Loads and displays projects fron a json file.",
+      "Automatically switches theme based on the time of day.",
+      "Changing a project actually only changes the content and forces an animation to display."
+    ],
+    "images": []
   }
 ]
