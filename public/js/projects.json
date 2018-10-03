@@ -2,7 +2,7 @@
   {
     "img": "front.png",
     "title": "Reddut: a Laravel blog app",
-    "description": "A blog post app made in Laravel </br> A project made for school",
+    "description": "A blog post app made in Laravel and that I based off of reddit.",
     "category": "Back-end",
     "imagefolder": "Reddut",
     "github": "https://github.com/perjor/Reddut",
@@ -20,7 +20,7 @@
   {
     "img": "home.png",
     "title": "Intranet: a Flask app",
-    "description": "A CRUD app made in Flask, Python. </br> A school project.",
+    "description": "A CRUD app made in Flask, Python. You can log in as an admin to add teachers, classes or studies.",
     "category": "Back-end",
     "imagefolder": "Flask",
     "github": "https://github.com/perjor/secu_school",
@@ -46,7 +46,7 @@
   {
     "img": "home.png",
     "title": "Hsc Brabo website",
-    "description": "A website for the student club HSC Brabo. </br> Also has a database website to view the users and adjust them, written in plain php",
+    "description": "A website for the student club HSC Brabo. </br> Also has a database website to view the users and adjust them, written in plain php.",
     "category": "Front-end",
     "imagefolder": "HSCBrabo",
     "github": "",
@@ -63,7 +63,7 @@
   {
     "img": "home.png",
     "title": "Star Wars React App",
-    "description": "A react app that loads in an API and saves it's own version in a GraphQL database",
+    "description": "A react app that loads in the star wars API and saves it's own version in a GraphQL database.",
     "category": "Front-end",
     "imagefolder": "StarWars",
     "github": "https://github.com/perjor/starwarsApp-REACT",
