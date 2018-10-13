@@ -1,5 +1,6 @@
 <template>
-  <div class="t-container" v-if="!this.$store.state.loading && this.$store.state.currentProject" @click.self="clearImage()">
+  <div class="t-container justify-around px-2" v-if="!this.$store.state.loading && this.$store.state.currentProject" @click.self="clearImage()">
+    <!-- <span class="self-center text-2xl text-orange-dark">Screenshots:</span> -->
     <div class="s-thumbnails">
       <div class="s-thumbnail" v-for="(image, i) in images" :key="i" :style="{ backgroundImage: `url('../img/projects/${imagefolder}/${image}')`}" :class="isCurrent(image)" @click="changeImage(i+1)"></div>
     </div>
@@ -33,10 +34,11 @@ export default {
 <style lang="scss" scoped>
 $break-medium: 720px;
 $break-large: 980px;
+$orange: #ff5722;
+$border-color: $orange;
 
 .t-container {
   display: flex;
-  justify-content: center;
   overflow-x: auto;
   .s-thumbnails {
     display: flex;
@@ -47,7 +49,7 @@ $break-large: 980px;
         height: 100px;
         width: 100px;
       }
-      border: 3px solid rgba(0, 0, 0, 0);
+      border: 3px solid rgba(255, 87, 34, 0.4);
       flex: 1 1 auto;
       margin: 0 10px;
       background-size: cover;
@@ -55,11 +57,11 @@ $break-large: 980px;
       transition: border 0.5s;
       &:hover {
         cursor: pointer;
-        border: 3px solid #ff5722;
+        border: 3px solid rgba(255, 87, 34, 0.8);
       }
     }
     .current {
-      border: 3px solid #ff5722;
+      border: 3px solid $border-color;
     }
   }
 }

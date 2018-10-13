@@ -6,10 +6,10 @@
       <transition name="fade">
         <Slideshow v-if="this.$store.state.currentImage" />
       </transition>
-      <Description v-if="this.$store.state.currentProject" class="flex-auto transition-1 px-5"/>
+      <Description v-if="this.$store.state.currentProject" class="flex-auto transition-1 px-5" />
     </div>
     <Description v-if="this.$store.state.currentProject" class="md:hidden" />
-    <Thumbnails class="py-5" />
+    <Thumbnails v-if="this.$store.getters.imagesTotal" class="py-5" />
     <Slideshow v-if="this.$store.state.currentImage" class="md:hidden" />
   </div>
 </template>
