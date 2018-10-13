@@ -27,7 +27,7 @@ export default new Vuex.Store({
   actions: {
     fetchProjects ({ state }) {
       state.loading = true
-      axios.get('js/projects.json').then(response => {
+      axios.get('js/projects.json').then((response) => {
         state.projects = response.data
         state.currentProject = state.projects[0]
         state.loading = false
@@ -38,13 +38,22 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    projectsTotal: state => {
+    projectsTotal: (state) => {
       return state.projects.length
     },
-    imagesTotal: state => {
-      return state.currentProject.images.length
+    imagesTotal: (state) => {
+      if (state.currentProject) {
+        return state.currentProject.images.length
+      }
+      return false
     },
-    theme: state => {
+    currentProjectImages: (state) => {
+      if (state.currentProject) {
+        return state.currentProject.images
+      }
+      return false
+    },
+    theme: (state) => {
       if (state.userTheme) return state.userTheme
       const d = new Date()
       const t = d.getHours()

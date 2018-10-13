@@ -1,5 +1,5 @@
 <template>
-  <div class="t-container justify-around px-2" v-if="!this.$store.state.loading && this.$store.state.currentProject" @click.self="clearImage()">
+  <div class="t-container justify-around px-2" @click.self="clearImage()">
     <!-- <span class="self-center text-2xl text-orange-dark">Screenshots:</span> -->
     <div class="s-thumbnails">
       <div class="s-thumbnail" v-for="(image, i) in images" :key="i" :style="{ backgroundImage: `url('../img/projects/${imagefolder}/${image}')`}" :class="isCurrent(image)" @click="changeImage(i+1)"></div>
@@ -8,26 +8,30 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 
 export default {
+  name: 'Thumbnails',
   methods: {
     isCurrent (image) {
       return this.current === image ? 'current' : ''
     },
     changeImage (index) {
       this.$store.commit('changeImage', this.images[index - 1])
-      this.imageCount = index
     },
     clearImage () {
       this.$store.commit('clearImage')
     }
   },
-  computed: mapState({
-    images: state => state.currentProject.images,
-    imagefolder: state => state.currentProject.imagefolder,
-    current: state => state.currentImage
-  })
+  computed: {
+    ...mapState({
+      imagefolder: state => state.currentProject.imagefolder,
+      current: state => state.currentImage
+    }),
+    ...mapGetters({
+      images: 'currentProjectImages'
+    })
+  }
 }
 </script>
 
