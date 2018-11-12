@@ -1,5 +1,20 @@
 [
   {
+    "img": "1.png",
+    "title": "Giftly: A surprise for both",
+    "description": "This was a school project where the goal was to invent a disruptive application. We worked out the front end in Vue and instead of making a back-end we made every request with the Vuex store.",
+    "category": "Front-end",
+    "imagefolder": "Giftly",
+    "github": "https://github.com/JensVanAssche/giftly",
+    "demo": "https://giftly.jordypereira.be/",
+    "tech": ["Vue", "Vuex", "Bootstrap"],
+    "features": [
+      "Shopping Cart: Choose a box and it gets saved in the cart.",
+      "Lots of Vuex features, such as deleting a single object and calculating the earliest delivery date based on the packages ordered."
+    ],
+    "images": ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png"]
+  },
+  {
     "img": "front.png",
     "title": "Reddut: a Laravel blog app",
     "description": "A blog post app made in Laravel and that I based off of reddit.",
