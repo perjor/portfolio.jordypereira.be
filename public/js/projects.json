@@ -2,12 +2,12 @@
   {
     "img": "1.png",
     "title": "Giftly: A surprise for both",
-    "description": "This was a school project where the goal was to invent a disruptive application. We worked out the front end in Vue and instead of making a back-end we made every request with the Vuex store.",
+    "description": "This was a school project where the goal was to invent a disruptive application. </br> Giftly is a platform where you can buy a random box as a gift. You can alter the box with your preferences or keep it completely random. </br> We worked out the front end in Vue and instead of making a back-end we made every request with the Vuex store.",
     "category": "Front-end",
     "imagefolder": "Giftly",
     "github": "https://github.com/JensVanAssche/giftly",
     "demo": "https://giftly.jordypereira.be/",
-    "tech": ["Vue", "Vuex", "Bootstrap"],
+    "tech": ["Vue", "Vuex", "Bootstrap", "Team of 4"],
     "features": [
       "Shopping Cart: Choose a box and it gets saved in the cart.",
       "Lots of Vuex features, such as deleting a single object and calculating the earliest delivery date based on the packages ordered."
