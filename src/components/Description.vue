@@ -8,7 +8,7 @@
           <li v-for="(tech, i) in project.tech" :key="i" class="inline pr-2 text-sm">{{ tech }}</li>
         </ul>
       </div>
-      <p class="my-5" v-html="project.description">
+      <p class="my-5 project-description" v-html="project.description">
       </p>
       <ul class="list-reset my-5 pt-5">
         <li v-for="(feature, i) in project.features" :key="i" class="mb-1"> <span class="font-bold text-orange">+ </span>{{ feature }}</li>
@@ -32,4 +32,7 @@ export default {
 </script>
 
 <style>
+.project-description {
+  line-height: 1.5rem;
+}
 </style>
