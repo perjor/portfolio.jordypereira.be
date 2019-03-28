@@ -72,7 +72,7 @@ export default {
 }
 
 .link {
-  @apply text-orange-dark no-underline mt-1;
+  @apply text-orange-dark no-underline;
 
   &:hover {
     @apply text-orange;

@@ -159,7 +159,7 @@
   {
     "img": "kowloon-logo",
     "title": "Kowloon, a dog portal",
-    "description": "<p>The final front-end school assignment. We received photoshop files for each page and viewport.</p><p>The website had to follow the design pixel-perfectly. </p><p>It had to be built up with atomic css and reusable components. The performance had to be optimized and perfect SEO.</p><p>You can check out <a href='https://kowloon.eu/styleguide/'>The Style guide</a></p>",
+    "description": "<p>The final front-end school assignment. We received photoshop files for each page and viewport.</p><p>The website had to follow the design pixel-perfectly. </p><p>It had to be built up with atomic css and reusable components. The performance had to be optimized and perfect SEO.</p><p>You can check out <a href='https://kowloon.eu/styleguide/' class='link'>The Style guide</a></p>",
     "category": "Front-end",
     "imagefolder": "Kowloon",
     "github": "https://github.com/perjor/kowloon",

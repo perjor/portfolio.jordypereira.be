@@ -14,8 +14,8 @@
         <li v-for="(feature, i) in project.features" :key="i" class="mb-1"> <span class="font-bold text-orange">+ </span>{{ feature }}</li>
       </ul>
       <p class="pt-4">
-        <a v-if="project.github" :href="project.github" target="_blank" rel="noopener" class="text-orange-dark hover:text-orange no-underline mt-1">Github</a> <br>
-        <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener" class="text-orange-dark hover:text-orange no-underline">Demo / Website</a>
+        <a v-if="project.github" :href="project.github" target="_blank" rel="noopener" class="link mt-1">Github</a> <br>
+        <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener" class="link">Demo / Website</a>
       </p>
     </div>
   </div>
