@@ -1,13 +1,21 @@
 <template>
   <div id="app" class="min-h-screen transition-05" :class="themeBackground">
     <nav class="p-5 flex justify-between">
-      <a href="https://jordypereira.be" class="text-orange no-underline uppercase text-4xl">
+      <a
+        href="https://jordypereira.be"
+        class="text-orange no-underline uppercase text-4xl"
+      >
         <span class="font-bold font-montserrat">Jordy</span>
         <span class="font-light font-open"> Pereira</span>
       </a>
-      <button @click="$store.dispatch('switchTheme')" class="text-orange-light hover:text-orange focus:outline-none transition-05 capitalize font-medium">Enable {{ this.$store.getters.reverseTheme }} Theme</button>
+      <button
+        @click="$store.dispatch('switchTheme')"
+        class="text-orange-light hover:text-orange focus:outline-none transition-05 capitalize font-medium"
+      >
+        Enable {{ this.$store.getters.reverseTheme }} Theme
+      </button>
     </nav>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 <script>
@@ -61,5 +69,13 @@ export default {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+
+.link {
+  @apply text-orange-dark no-underline mt-1;
+
+  &:hover {
+    @apply text-orange;
+  }
 }
 </style>
