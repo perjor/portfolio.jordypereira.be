@@ -178,7 +178,9 @@
     ],
     "images": [
       "kowloon-home.png",
-      "kowloon-filter.png"
+      "kowloon-filter.png",
+      "kowloon-slider.png",
+      "kowloon-endless-scroll.png"
     ]
   }
 ]
