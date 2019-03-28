@@ -7,12 +7,24 @@
     "imagefolder": "Giftly",
     "github": "https://github.com/JensVanAssche/giftly",
     "demo": "https://giftly.jordypereira.be/",
-    "tech": ["Vue", "Vuex", "Bootstrap", "Team of 4"],
+    "tech": [
+      "Vue",
+      "Vuex",
+      "Bootstrap",
+      "Team of 4"
+    ],
     "features": [
       "Shopping Cart: Choose a box and it gets saved in the cart.",
       "Lots of Vuex features, such as deleting a single object and calculating the earliest delivery date based on the packages ordered."
     ],
-    "images": ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png"]
+    "images": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.png",
+      "6.png"
+    ]
   },
   {
     "img": "front.png",
@@ -22,7 +34,11 @@
     "imagefolder": "Reddut",
     "github": "https://github.com/perjor/Reddut",
     "demo": "https://reddut.jordypereira.be/",
-    "tech": ["Laravel", "PHP", "Bootstrap"],
+    "tech": [
+      "Laravel",
+      "PHP",
+      "Bootstrap"
+    ],
     "features": [
       "Authentication: Login and Register.",
       "Create a post and comment on it.",
@@ -30,7 +46,11 @@
       "Edit and delete your own posts / comments.",
       "Admin can sticky a post and delete or edit all comments and posts."
     ],
-    "images": ["front.png", "post.png", "editPost.png"]
+    "images": [
+      "front.png",
+      "post.png",
+      "editPost.png"
+    ]
   },
   {
     "img": "home.png",
@@ -40,7 +60,11 @@
     "imagefolder": "Flask",
     "github": "https://github.com/perjor/secu_school",
     "demo": "",
-    "tech": ["Python", "Flask", "Bootstrap"],
+    "tech": [
+      "Python",
+      "Flask",
+      "Bootstrap"
+    ],
     "features": [
       "Authentication: Login as a teacher.",
       "Students can see the classes, teachers and contact info",
@@ -66,14 +90,24 @@
     "imagefolder": "HSCBrabo",
     "github": "",
     "demo": "http://www.hscbrabo.be/",
-    "tech": ["PugJS", "Gulp", "Bootstrap", "Plain PHP"],
+    "tech": [
+      "PugJS",
+      "Gulp",
+      "Bootstrap",
+      "Plain PHP"
+    ],
     "features": [
       "4 static pages with info about the club.",
       "Praesidium list is made with pugjs mixins.",
       "Brabokot info is adjustable from an admin panel.",
       "Users can register with a form, that needs to be accepted in the admin panel."
     ],
-    "images": ["home.png", "about.png", "db_users.png", "brabokot.png"]
+    "images": [
+      "home.png",
+      "about.png",
+      "db_users.png",
+      "brabokot.png"
+    ]
   },
   {
     "img": "home.png",
@@ -96,7 +130,11 @@
       "Create your own planet with its types and residents loaded from the API>",
       "Save your own planets in a GraphQL database hosted on Heroku"
     ],
-    "images": ["home.png", "add_planet.png", "planet.png"]
+    "images": [
+      "home.png",
+      "add_planet.png",
+      "planet.png"
+    ]
   },
   {
     "img": "",
@@ -106,12 +144,41 @@
     "imagefolder": "Portfolio",
     "github": "https://github.com/perjor/portfolio.jordypereira.be",
     "demo": "",
-    "tech": ["VueJS", "Tailwind CSS", "Vuex"],
+    "tech": [
+      "VueJS",
+      "Tailwind CSS",
+      "Vuex"
+    ],
     "features": [
       "Loads and displays projects fron a json file.",
       "Automatically switches theme based on the time of day.",
       "Changing a project actually only changes the content and forces an animation to display."
     ],
     "images": []
+  },
+  {
+    "img": "kowloon-logo",
+    "title": "Kowloon, a dog portal",
+    "description": "<p>The final front-end school assignment. We received photoshop files for each page and viewport.</p><p>The website had to follow the design pixel-perfectly. </p><p>It had to be built up with atomic css and reusable components. The performance had to be optimized and perfect SEO.</p><p>You can check out <a href='https://kowloon.eu/styleguide/'>The Style guide</a></p>",
+    "category": "Front-end",
+    "imagefolder": "Kowloon",
+    "github": "https://github.com/perjor/kowloon",
+    "demo": "https://kowloon.eu",
+    "tech": [
+      "Nuxt",
+      "Tailwind CSS",
+      "Vuex"
+    ],
+    "features": [
+      "Dynamic routes based on category.",
+      "Endless scroller.",
+      "Displays articles based on data.",
+      "Reusable vue components.",
+      "Advanced search and filter."
+    ],
+    "images": [
+      "kowloon-home.png",
+      "kowloon-filter.png"
+    ]
   }
 ]
