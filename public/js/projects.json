@@ -183,5 +183,28 @@
       "kowloon-endless-scroll.png",
       "kowloon-sort.png"
     ]
+  },
+  {
+    "img": "catvent-home",
+    "title": "Catvent, an advent calendar with cats",
+    "description": "<p>This was my project to try out Nuxt.</p><p>You can flip over a card with a random cat picture/gif every day, until the 25th.</p><p>The cats are chosen from a random set depending on the day you click on.</p><p>I save which cat pictures you've clicked on with 1 long string in your localStorage. That way I limit the amount of data to the bare minimum.</p><p>When you visit the page, all the images get preloaded and saved in the same string. That way, flipping the images becomes an instant experience.</p><p>Big shout out to <a href='https://thecatapi.com' class='link' target='_blank' rel='noopener'>The Cat Api</a></p>",
+    "category": "Front-end",
+    "imagefolder": "Catvent",
+    "github": "https://github.com/perjor/catvent",
+    "demo": "https://catvent.jordypereira.be/",
+    "tech": [
+      "Nuxt",
+      "Tailwind CSS",
+      "Netlify",
+      "TheCatApi"
+    ],
+    "features": [
+      "Load in a different set of random kitties per day.",
+      "Preload all images.",
+      "Save clicked images in 1 string in Local Storage.",
+      "The Cat Face is drawn with CSS.",
+      "CSS hover animation."
+    ],
+    "images": []
   }
 ]
