@@ -37,6 +37,9 @@ export default {
 </script>
 
 <style lang="scss">
+html {
+  background: #ff6666;
+}
 .animate {
   animation-duration: 200ms;
   animation-fill-mode: both;
