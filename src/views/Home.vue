@@ -14,7 +14,7 @@
       <div
         v-for="(project, index) in filteredProjects"
         :key="project.title"
-        class="w-32 h-32 m-8 shadow-md flex flex-col justify-between items-center p-4 rounded cursor-pointer"
+        class="w-32 h-32 m-8 shadow-md flex flex-col justify-between items-center p-4 rounded cursor-pointer shadow-xl"
         :class="themeBackground"
         @click="selectProject(index)"
       >
@@ -77,5 +77,8 @@ export default {
 <style scoped>
 .max-w-1024 {
   max-width: 1024px;
+}
+.shadow-xl:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.48), 0 2px 4px 0 rgba(0, 0, 0, 0.64);
 }
 </style>
