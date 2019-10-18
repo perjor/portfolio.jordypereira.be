@@ -7,6 +7,7 @@
     "imagefolder": "Giftly",
     "github": "https://github.com/JensVanAssche/giftly",
     "demo": "https://giftly.jordypereira.be/",
+    "date": "19/10/2018",
     "tech": [
       "Vue",
       "Vuex",
@@ -34,6 +35,7 @@
     "imagefolder": "Reddut",
     "github": "https://github.com/perjor/Reddut",
     "demo": "https://reddut.jordypereira.be/",
+    "date": "01/11/2016",
     "tech": [
       "Laravel",
       "PHP",
@@ -56,10 +58,11 @@
     "img": "home.png",
     "title": "Intranet app",
     "description": "A CRUD app made in Flask, Python. You can log in as an admin to add teachers, classes or studies.",
-    "category": "Back-end",
+    "category": "Back/end",
     "imagefolder": "Flask",
     "github": "https://github.com/perjor/secu_school",
     "demo": "",
+    "date": "01/01/2018",
     "tech": [
       "Python",
       "Flask",
@@ -86,10 +89,11 @@
     "img": "home.png",
     "title": "Hsc Brabo website",
     "description": "A website for the student club HSC Brabo. </br> Also has a database website to view the users and adjust them, written in plain php.",
-    "category": "Front-end",
+    "category": "Front/end",
     "imagefolder": "HSCBrabo",
     "github": "",
     "demo": "http://www.hscbrabo.be/",
+    "date": "01/09/2017",
     "tech": [
       "Pug",
       "Gulp",
@@ -113,10 +117,11 @@
     "img": "home.png",
     "title": "Star Wars React App",
     "description": "A react app that loads in the star wars API and saves it's own version in a GraphQL database.",
-    "category": "Front-end",
+    "category": "Front/end",
     "imagefolder": "StarWars",
-    "github": "https://github.com/perjor/starwarsApp-REACT",
+    "github": "https://github.com/perjor/starwarsApp/REACT",
     "demo": "https://starwars.jordypereira.be/planets",
+    "date": "01/03/2018",
     "tech": [
       "React",
       "Bootstrap",
@@ -140,10 +145,11 @@
     "img": "",
     "title": "This Portfolio Site",
     "description": "This site is made in Vue.js. I use Vuex to keep a global state and the gallery is made from scratch. I decided to use Tailwind.css for the layout.",
-    "category": "Front-end",
+    "category": "Front/end",
     "imagefolder": "Portfolio",
     "github": "https://github.com/perjor/portfolio.jordypereira.be",
     "demo": "",
+    "date": "01/10/2018",
     "tech": [
       "Vue",
       "Tailwind",
@@ -157,13 +163,14 @@
     "images": []
   },
   {
-    "img": "kowloon-logo",
+    "img": "kowloon/logo",
     "title": "Kowloon",
-    "description": "<p>The final front-end school assignment. We received photoshop files for each page and for each viewport.</p><p>The website had to follow the design pixel-perfectly. </p><p>It had to be built up with atomic css and reusable components. The performance had to be optimized and perfect SEO.</p><p>You can check out <a href='https://kowloon.eu/styleguide/' class='link'>The Style guide</a></p>",
-    "category": "Front-end",
+    "description": "<p>The final front/end school assignment. We received photoshop files for each page and for each viewport.</p><p>The website had to follow the design pixel/perfectly. </p><p>It had to be built up with atomic css and reusable components. The performance had to be optimized and perfect SEO.</p><p>You can check out <a href='https://kowloon.eu/styleguide/' class='link'>The Style guide</a></p>",
+    "category": "Front/end",
     "imagefolder": "Kowloon",
     "github": "https://github.com/perjor/kowloon",
     "demo": "https://kowloon.eu",
+    "date": "01/01/2019",
     "tech": [
       "Nuxt",
       "Tailwind",
@@ -178,21 +185,22 @@
       "Advanced search and filter."
     ],
     "images": [
-      "kowloon-home.png",
-      "kowloon-filter.png",
-      "kowloon-slider.png",
-      "kowloon-endless-scroll.png",
-      "kowloon-sort.png"
+      "kowloon/home.png",
+      "kowloon/filter.png",
+      "kowloon/slider.png",
+      "kowloon/endless/scroll.png",
+      "kowloon/sort.png"
     ]
   },
   {
-    "img": "catvent-home",
+    "img": "catvent/home",
     "title": "Catvent",
     "description": "<p>This was my project to try out Nuxt.</p><p>You can flip over a card with a random cat picture/gif every day, until the 25th.</p><p>The cats are chosen from a random set depending on the day you click on.</p><p>I save which cat pictures you've clicked on with 1 long string in your localStorage. That way I limit the amount of data to the bare minimum.</p><p>When you visit the page, all the images get preloaded and saved in the same string. That way, flipping the images becomes an instant experience.</p><p>Big shout out to <a href='https://thecatapi.com' class='link' target='_blank' rel='noopener'>The Cat Api</a></p>",
-    "category": "Front-end",
+    "category": "Front/end",
     "imagefolder": "Catvent",
     "github": "https://github.com/perjor/catvent",
     "demo": "https://catvent.jordypereira.be/",
+    "date": "01/12/2018",
     "tech": [
       "Nuxt",
       "Vue",
@@ -211,13 +219,14 @@
     "images": []
   },
   {
-    "img": "catvent-home",
+    "img": "catvent/home",
     "title": "Catalyser",
-    "description": "<p>Proof of concept: Scan a cat's tail and get the tail position returned.</p><p>I have collected a dataset of 50 cat images to feed a pre-trained image recognizing ML model.</p><p>You can either train the model in your own browser, or load in a pre trained model that I have prepared.</p><p>It then tries to guess the test images based on the data it has received.</p><p><a href='https://streamable.com/i4bd5' class='link' target='_blank' rel='noopener'>Check out a recorded demo</a></p>",
-    "category": "Front-end",
+    "description": "<p>Proof of concept: Scan a cat's tail and get the tail position returned.</p><p>I have collected a dataset of 50 cat images to feed a pre/trained image recognizing ML model.</p><p>You can either train the model in your own browser, or load in a pre trained model that I have prepared.</p><p>It then tries to guess the test images based on the data it has received.</p><p><a href='https://streamable.com/i4bd5' class='link' target='_blank' rel='noopener'>Check out a recorded demo</a></p>",
+    "category": "Front/end",
     "imagefolder": "Catvent",
     "github": "https://github.com/perjor/catalyser",
     "demo": "https://catalyser.jordypereira.be/",
+    "date": "11/01/2019",
     "tech": [
       "Javascript",
       "Machine Learning",
@@ -235,13 +244,14 @@
     "images": []
   },
   {
-    "img": "manon22-1",
+    "img": "manon22/1",
     "title": "Donate a kitty",
     "description": "<p>Here you can donate a cat image.</p><p>You can either choose your own image, which then gets checked if it's a real cat by an ML aalgorithm, or choose a random cat image.</p><p>When donating a cat, it plays a sound of a cat.</p>",
-    "category": "Front-end",
+    "category": "Front/end",
     "imagefolder": "DonateACat",
     "github": "",
     "demo": "https://manon.22.jordypereira.be",
+    "date": "18/03/2019",
     "tech": [
       "Javascript",
       "Machine Learning",

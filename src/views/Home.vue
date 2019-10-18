@@ -57,9 +57,12 @@ export default {
     },
     ...mapState(['projects']),
     filteredProjects () {
-      return this.projects.filter(({ tech }) => {
-        return this.currentFilter ? tech.includes(this.currentFilter) : this.projects
-      })
+      const projects = this.projects
+      projects.sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)))
+
+      return this.currentFilter ? projects.filter(({ tech }) => {
+        return tech.includes(this.currentFilter)
+      }) : projects
     }
   },
   methods: {
