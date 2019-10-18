@@ -10,11 +10,11 @@
         :class="{ 'text-orange': filter === currentFilter}"
       >{{ filter }}&nbsp;</span>
     </div>
-    <div class="flex flex-wrap justify-around max-w-1024">
+    <div class="flex flex-wrap justify-around max-w-1024 m-auto">
       <div
         v-for="(project, index) in filteredProjects"
         :key="project.title"
-        class="w-32 h-32 m-auto shadow-md flex flex-col justify-between items-center p-4 rounded cursor-pointer"
+        class="w-32 h-32 m-8 shadow-md flex flex-col justify-between items-center p-4 rounded cursor-pointer"
         :class="themeBackground"
         @click="selectProject(index)"
       >
