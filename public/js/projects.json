@@ -159,7 +159,7 @@
   {
     "img": "kowloon-logo",
     "title": "Kowloon, a dog portal",
-    "description": "<p>The final front-end school assignment. We received photoshop files for each page and viewport.</p><p>The website had to follow the design pixel-perfectly. </p><p>It had to be built up with atomic css and reusable components. The performance had to be optimized and perfect SEO.</p><p>You can check out <a href='https://kowloon.eu/styleguide/' class='link'>The Style guide</a></p>",
+    "description": "<p>The final front-end school assignment. We received photoshop files for each page and for each viewport.</p><p>The website had to follow the design pixel-perfectly. </p><p>It had to be built up with atomic css and reusable components. The performance had to be optimized and perfect SEO.</p><p>You can check out <a href='https://kowloon.eu/styleguide/' class='link'>The Style guide</a></p>",
     "category": "Front-end",
     "imagefolder": "Kowloon",
     "github": "https://github.com/perjor/kowloon",
@@ -210,7 +210,7 @@
   {
     "img": "catvent-home",
     "title": "POC: Catalyser, a ML Cat Analyser",
-    "description": "<p>Proof of concept: Scan a cat's tail and get the tail position returned.</p><p>I have collected a dataset of 50 cat images to feed a pre-trained image recognizing ML model.</p><p>You can either train the model in your own broser, or load in a pre trained model that I have prepared.</p><p>It then tries to guess the test images based on the data it has received.</p><p><a href='https://streamable.com/i4bd5' class='link' target='_blank' rel='noopener'>Check out a recorded demo</a></p>",
+    "description": "<p>Proof of concept: Scan a cat's tail and get the tail position returned.</p><p>I have collected a dataset of 50 cat images to feed a pre-trained image recognizing ML model.</p><p>You can either train the model in your own browser, or load in a pre trained model that I have prepared.</p><p>It then tries to guess the test images based on the data it has received.</p><p><a href='https://streamable.com/i4bd5' class='link' target='_blank' rel='noopener'>Check out a recorded demo</a></p>",
     "category": "Front-end",
     "imagefolder": "Catvent",
     "github": "https://github.com/perjor/catalyser",
@@ -228,5 +228,28 @@
       "Uses other images to test the trained model."
     ],
     "images": []
+  },
+  {
+    "img": "manon22-1",
+    "title": "Donate a kitty",
+    "description": "<p>Here you can donate a cat image.</p><p>You can either choose your own image, which then gets checked if it's a real cat by an ML aalgorithm, or choose a random cat image.</p><p>When donating a cat, it plays a sound of a cat.</p>",
+    "category": "Front-end",
+    "imagefolder": "DonateACat",
+    "github": "",
+    "demo": "https://manon.22.jordypereira.be",
+    "tech": [
+      "Javascript",
+      "Machine Learning",
+      "Vue.js"
+    ],
+    "features": [
+      "OC Cat sounds.",
+      "ML Cat checking through the CAT Api.",
+      "Event website for a birthday."
+    ],
+    "images": [
+      "manon22-1.png",
+      "manon22-2.png"
+    ]
   }
 ]
