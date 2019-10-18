@@ -1,25 +1,36 @@
 <template>
-  <div class="flex items-center justify-around">
-    <div @click="previousProject()" role="button" class="h-85v w-full flex items-center justify-center text-orange hover:text-orange-light">
-      <span class="text-4xl">&#8592;</span>
+  <div>
+    <div class="m-8" :class="themeText">
+      Filter:
+      <span
+        v-for="filter in filters"
+        :key="filter"
+        @click="filter === currentFilter ? currentFilter = '' : currentFilter = filter"
+        class="cursor-pointer"
+        :class="{ 'text-orange': filter === currentFilter}"
+      >{{ filter }}&nbsp;</span>
     </div>
-
-    <div class="animate" ref="project">
-      <Project v-if="!this.$store.state.loading" class="shadow-lg w-80v md:h-85v" :class="themeBackground" />
+    <div class="flex flex-wrap justify-around">
+      <div
+        v-for="(project, index) in filteredProjects"
+        :key="project.title"
+        class="w-32 h-32 m-8 shadow-md flex flex-col justify-between items-center p-4 rounded cursor-pointer"
+        :class="themeBackground"
+        @click="selectProject(index)"
+      >
+        <p class="text-lg text-center">{{ project.title }}</p>
+        <p class="text-orange">{{ project.category }}</p>
+      </div>
     </div>
-
-    <div @click="nextProject()" role="button" class="h-85v w-full flex items-center justify-center text-orange hover:text-orange-light">
-      <span class="text-4xl">&#8594;</span>
-    </div>
-
   </div>
 </template>
 
 <script>
 import Project from '@/components/Project.vue'
+import { mapState } from 'vuex'
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
     Project
   },
@@ -27,85 +38,35 @@ export default {
     return {
       projectCount: 1,
       fadeDuration: 300,
-      lightColor: 'bg-white',
-      darkColor: 'bg-orange-lightest'
+      lightColor: 'white',
+      darkColor: 'orange-lightest',
+      filters: ['Cats', 'Vue', 'React', 'Nuxt', 'PHP', 'Python'],
+      currentFilter: ''
     }
-  },
-  mounted () {
-    this.$store.dispatch('fetchProjects')
   },
   computed: {
     themeBackground () {
       let theme = this.lightColor
       if (this.$store.getters.theme === 'dark') theme = this.darkColor
-      return theme
+      return 'bg-' + theme
+    },
+    themeText () {
+      let theme = 'black'
+      if (this.$store.getters.theme === 'dark') theme = this.lightColor
+      return 'text-' + theme
+    },
+    ...mapState(['projects']),
+    filteredProjects () {
+      return this.projects.filter(({ tech }) => {
+        return this.currentFilter ? tech.includes(this.currentFilter) : this.projects
+      })
     }
   },
   methods: {
-    changeProject (index) {
-      this.$store.commit('changeProject', this.$store.state.projects[index - 1])
-      this.projectCount = index
-    },
-    nextProject () {
-      this.$refs.project.classList.add('fadeInRight')
-      if (this.projectCount === this.$store.getters.projectsTotal) {
-        this.projectCount = 1
-      } else {
-        this.projectCount++
-      }
-      setTimeout(() => {
-        this.$refs.project.classList.remove('fadeInRight')
-      }, this.fadeDuration)
-      this.changeProject(this.projectCount)
-    },
-    previousProject () {
-      this.$refs.project.classList.add('fadeInLeft')
-
-      if (this.projectCount === 1) {
-        this.projectCount = this.$store.getters.projectsTotal
-      } else {
-        this.projectCount--
-      }
-
-      setTimeout(() => {
-        this.$refs.project.classList.remove('fadeInLeft')
-      }, this.fadeDuration)
-
-      this.changeProject(this.projectCount)
+    selectProject (index) {
+      this.$store.commit('changeProject', this.$store.state.projects[index])
+      this.$router.push({ name: 'projects', params: { projectIndex: index + 1 } })
     }
   }
 }
 </script>
-
-<style lang="scss" scoped>
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeInLeft {
-  animation-name: fadeInLeft;
-}
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeInRight {
-  animation-name: fadeInRight;
-}
-</style>

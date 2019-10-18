@@ -1,14 +1,12 @@
 <template>
-  <div class="flex
-              flex-col
-              justify-between">
+  <div class="flex flex-col justify-between">
     <div class="w-full flex-1 hidden md:flex flex-row justify-center">
       <transition name="fade">
         <Slideshow v-if="this.$store.state.currentImage" />
       </transition>
-      <Description v-if="this.$store.state.currentProject" class="flex-auto transition-1 px-5" />
+      <Description v-if="project" :project="project" class="flex-auto transition-1 px-5" />
     </div>
-    <Description v-if="this.$store.state.currentProject" class="md:hidden" />
+    <Description v-if="project" :project="project" class="md:hidden" />
     <Thumbnails class="py-5" />
     <Slideshow v-if="this.$store.state.currentImage" class="md:hidden" />
   </div>
@@ -25,6 +23,9 @@ export default {
     Slideshow,
     Thumbnails,
     Description
+  },
+  props: {
+    project: Object
   }
 }
 </script>

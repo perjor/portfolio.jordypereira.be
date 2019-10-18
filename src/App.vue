@@ -1,19 +1,14 @@
 <template>
   <div id="app" class="min-h-screen transition-05" :class="themeBackground">
     <nav class="p-5 flex justify-between">
-      <a
-        href="https://jordypereira.be"
-        class="text-orange no-underline uppercase text-4xl"
-      >
+      <router-link to="/" class="text-orange no-underline uppercase text-4xl">
         <span class="font-bold font-montserrat">Jordy</span>
-        <span class="font-light font-open"> Pereira</span>
-      </a>
+        <span class="font-light font-open">Pereira</span>
+      </router-link>
       <button
         @click="$store.dispatch('switchTheme')"
         class="text-orange-light hover:text-orange focus:outline-none transition-05 capitalize font-medium"
-      >
-        Enable {{ this.$store.getters.reverseTheme }} Theme
-      </button>
+      >Enable {{ this.$store.getters.reverseTheme }} Theme</button>
     </nav>
     <router-view />
   </div>
@@ -32,6 +27,9 @@ export default {
       if (this.$store.getters.theme === 'dark') theme = this.darkColor
       return theme
     }
+  },
+  mounted () {
+    this.$store.dispatch('fetchProjects')
   }
 }
 </script>

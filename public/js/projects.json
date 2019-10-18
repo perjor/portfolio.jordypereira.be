@@ -1,7 +1,7 @@
 [
   {
     "img": "1.png",
-    "title": "Giftly: A surprise for both",
+    "title": "Giftly",
     "description": "This was a school project where the goal was to invent a disruptive application. </br> Giftly is a platform where you can buy a random box as a gift. You can alter the box with your preferences or keep it completely random. </br> We worked out the front end in Vue and instead of making a back-end we made every request with the Vuex store.",
     "category": "Front-end",
     "imagefolder": "Giftly",
@@ -11,7 +11,7 @@
       "Vue",
       "Vuex",
       "Bootstrap",
-      "Team of 4"
+      "Team"
     ],
     "features": [
       "Shopping Cart: Choose a box and it gets saved in the cart.",
@@ -28,7 +28,7 @@
   },
   {
     "img": "front.png",
-    "title": "Reddut: a Laravel blog app",
+    "title": "Reddut",
     "description": "A blog post app made in Laravel and that I based off of reddit.",
     "category": "Back-end",
     "imagefolder": "Reddut",
@@ -54,7 +54,7 @@
   },
   {
     "img": "home.png",
-    "title": "Intranet: a Flask app",
+    "title": "Intranet app",
     "description": "A CRUD app made in Flask, Python. You can log in as an admin to add teachers, classes or studies.",
     "category": "Back-end",
     "imagefolder": "Flask",
@@ -91,10 +91,10 @@
     "github": "",
     "demo": "http://www.hscbrabo.be/",
     "tech": [
-      "PugJS",
+      "Pug",
       "Gulp",
       "Bootstrap",
-      "Plain PHP"
+      "PHP"
     ],
     "features": [
       "4 static pages with info about the club.",
@@ -118,10 +118,10 @@
     "github": "https://github.com/perjor/starwarsApp-REACT",
     "demo": "https://starwars.jordypereira.be/planets",
     "tech": [
-      "ReactJS",
-      "Bootstrap-Theme",
+      "React",
+      "Bootstrap",
       "API",
-      "CSS-Grid",
+      "Grid",
       "GraphQL",
       "Heroku"
     ],
@@ -145,8 +145,8 @@
     "github": "https://github.com/perjor/portfolio.jordypereira.be",
     "demo": "",
     "tech": [
-      "VueJS",
-      "Tailwind CSS",
+      "Vue",
+      "Tailwind",
       "Vuex"
     ],
     "features": [
@@ -158,7 +158,7 @@
   },
   {
     "img": "kowloon-logo",
-    "title": "Kowloon, a dog portal",
+    "title": "Kowloon",
     "description": "<p>The final front-end school assignment. We received photoshop files for each page and for each viewport.</p><p>The website had to follow the design pixel-perfectly. </p><p>It had to be built up with atomic css and reusable components. The performance had to be optimized and perfect SEO.</p><p>You can check out <a href='https://kowloon.eu/styleguide/' class='link'>The Style guide</a></p>",
     "category": "Front-end",
     "imagefolder": "Kowloon",
@@ -166,8 +166,9 @@
     "demo": "https://kowloon.eu",
     "tech": [
       "Nuxt",
-      "Tailwind CSS",
-      "Vuex"
+      "Tailwind",
+      "Vuex",
+      "Vue"
     ],
     "features": [
       "Dynamic routes based on category.",
@@ -186,7 +187,7 @@
   },
   {
     "img": "catvent-home",
-    "title": "Catvent, an advent calendar with cats",
+    "title": "Catvent",
     "description": "<p>This was my project to try out Nuxt.</p><p>You can flip over a card with a random cat picture/gif every day, until the 25th.</p><p>The cats are chosen from a random set depending on the day you click on.</p><p>I save which cat pictures you've clicked on with 1 long string in your localStorage. That way I limit the amount of data to the bare minimum.</p><p>When you visit the page, all the images get preloaded and saved in the same string. That way, flipping the images becomes an instant experience.</p><p>Big shout out to <a href='https://thecatapi.com' class='link' target='_blank' rel='noopener'>The Cat Api</a></p>",
     "category": "Front-end",
     "imagefolder": "Catvent",
@@ -194,9 +195,11 @@
     "demo": "https://catvent.jordypereira.be/",
     "tech": [
       "Nuxt",
-      "Tailwind CSS",
+      "Vue",
+      "Tailwind",
       "Netlify",
-      "TheCatApi"
+      "TheCatApi",
+      "Cats"
     ],
     "features": [
       "Load in a different set of random kitties per day.",
@@ -209,7 +212,7 @@
   },
   {
     "img": "catvent-home",
-    "title": "POC: Catalyser, a ML Cat Analyser",
+    "title": "Catalyser",
     "description": "<p>Proof of concept: Scan a cat's tail and get the tail position returned.</p><p>I have collected a dataset of 50 cat images to feed a pre-trained image recognizing ML model.</p><p>You can either train the model in your own browser, or load in a pre trained model that I have prepared.</p><p>It then tries to guess the test images based on the data it has received.</p><p><a href='https://streamable.com/i4bd5' class='link' target='_blank' rel='noopener'>Check out a recorded demo</a></p>",
     "category": "Front-end",
     "imagefolder": "Catvent",
@@ -220,7 +223,9 @@
       "Machine Learning",
       "ML5.js",
       "Tensorflow.js",
-      "ImageNet"
+      "ImageNet",
+      "ML",
+      "Cats"
     ],
     "features": [
       "Uses a dataset of 50 cat images.",
@@ -240,7 +245,9 @@
     "tech": [
       "Javascript",
       "Machine Learning",
-      "Vue.js"
+      "Vue",
+      "ML",
+      "Cats"
     ],
     "features": [
       "OC Cat sounds.",

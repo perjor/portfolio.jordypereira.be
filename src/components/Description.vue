@@ -8,26 +8,41 @@
           <li v-for="(tech, i) in project.tech" :key="i" class="inline pr-2 text-sm">{{ tech }}</li>
         </ul>
       </div>
-      <p class="my-5 project-description" v-html="project.description">
-      </p>
+      <p class="my-5 project-description" v-html="project.description"></p>
       <ul class="list-reset my-5 pt-5">
-        <li v-for="(feature, i) in project.features" :key="i" class="mb-1"> <span class="font-bold text-orange">+ </span>{{ feature }}</li>
+        <li v-for="(feature, i) in project.features" :key="i" class="mb-1">
+          <span class="font-bold text-orange">+</span>
+          {{ feature }}
+        </li>
       </ul>
       <p class="pt-4">
-        <a v-if="project.github" :href="project.github" target="_blank" rel="noopener" class="link mt-1" @click="$ga.event('github', project.imageFolder)">Github</a> <br>
-        <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener" class="link" @click="$ga.event('demo', project.imageFolder)">Demo / Website</a>
+        <a
+          v-if="project.github"
+          :href="project.github"
+          target="_blank"
+          rel="noopener"
+          class="link mt-1"
+          @click="$ga.event('github', project.imageFolder)"
+        >Github</a>
+        <br />
+        <a
+          v-if="project.demo"
+          :href="project.demo"
+          target="_blank"
+          rel="noopener"
+          class="link"
+          @click="$ga.event('demo', project.imageFolder)"
+        >Demo / Website</a>
       </p>
     </div>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
-
 export default {
-  computed: mapState({
-    project: state => state.currentProject
-  })
+  props: {
+    project: Object
+  }
 }
 </script>
 
