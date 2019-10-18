@@ -14,7 +14,7 @@
       <div
         v-for="(project, index) in filteredProjects"
         :key="project.title"
-        class="w-32 h-32 m-8 shadow-md flex flex-col justify-between items-center p-4 rounded cursor-pointer"
+        class="w-32 h-32 m-auto shadow-md flex flex-col justify-between items-center p-4 rounded cursor-pointer max-w-1024"
         :class="themeBackground"
         @click="selectProject(index)"
       >
@@ -73,3 +73,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.max-w-1024 {
+  max-width: 1024px;
+}
+</style>
