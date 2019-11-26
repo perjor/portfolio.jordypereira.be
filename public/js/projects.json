@@ -246,7 +246,7 @@
   {
     "img": "manon22/1",
     "title": "Donate a kitty",
-    "description": "<p>Here you can donate a cat image.</p><p>You can either choose your own image, which then gets checked if it's a real cat by an ML aalgorithm, or choose a random cat image.</p><p>When donating a cat, it plays a sound of a cat.</p>",
+    "description": "<p>Here you can donate a cat image.</p><p>You can either choose your own image, which then gets checked if it's a real cat by an ML algorithm, or choose a random cat image.</p><p>When donating a cat, it plays a sound of a cat.</p>",
     "category": "Front-end",
     "imagefolder": "DonateACat",
     "github": "",
