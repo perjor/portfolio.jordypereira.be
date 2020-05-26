@@ -169,7 +169,7 @@
     "category": "Front-end",
     "imagefolder": "Kowloon",
     "github": "https://github.com/perjor/kowloon",
-    "demo": "https://kowloon.eu",
+    "demo": "https://kowloon.netlify.app/",
     "date": "01/01/2019",
     "tech": [
       "Nuxt",
